@@ -1,0 +1,5 @@
+docker login
+docker tag fastapi-prime-app pranavd12/fastapi-prime-app:latest
+docker push pranavd12/fastapi-prime-app:latest
+docker pull pranavd12/fastapi-prime-app:latest 
+docker run -d -p 8000:8000 pranavd12/fastapi-prime-app:latest

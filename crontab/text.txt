@@ -1,0 +1,16 @@
+# script.py
+from datetime import datetime 
+print(datetime.now())
+
+# run.sh
+
+#!/bin/bash
+SCRIPT_PATH=“Documents/script.py” 
+log_file=”Documents/out.log”
+/usr/bin/python3 “$SCRIPT_PATH”>>”$log_file”
+
+chmod +x run.sh
+
+crontab -e
+
+* * * * * /bin/bash /home/peplive/Documents/run.sh
